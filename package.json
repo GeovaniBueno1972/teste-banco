@@ -1,0 +1,14 @@
+{
+  "name": "estudo",
+  "version": "1.0.0",
+  "description": "teste para estudo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Geovani Bueno",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
