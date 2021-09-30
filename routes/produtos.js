@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mysql = require('../mysql').pool;
+const login = request('../middleware/login');
 
 
 //retorna todos os produtos
@@ -19,7 +20,7 @@ router.get('/', (req, res, next) => {
 
 
 //insere um novo produto
-router.post('/', (req, res, next) => {
+router.post('/', login, (req, res, next) => {
     
     mysql.getConnection((error, conn) => {
         if (error){return res.status(500).send({error: error})}
